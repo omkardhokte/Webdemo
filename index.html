@@ -3,58 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-LearnHub</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6584;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #ff7b93;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .social-login button {
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .social-login button:hover {
+            background-color: #f0f0f0;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="E-LearnHub Logo">
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <div>
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button type="submit">LOGIN</button>
+        </form>
+        <div class="social-login">
+            <button>Facebook</button>
+            <button>Google</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="login">Log in</a></li>
-                <li><a href="#" class="register">Register</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Elevate Your Skills Anytime, Anywhere</h1>
-                <p>Learn from the Best Unlock your potential with courses taught by industry experts. Whether you're looking to upskill, reskill, or explore a new hobby, our platform offers flexible learning that fits your schedule.</p>
-                <a href="#" class="explore-btn">Explore More</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero-image.png" alt="Learning Illustration">
-            </div>
-        </section>
-        <section class="stats">
-            <div>
-                <span class="icon">⭐</span>
-                <p>4.6 Overall Rating</p>
-            </div>
-            <div>
-                <span class="icon">👨‍🎓</span>
-                <p>9.5M+ Students</p>
-            </div>
-            <div>
-                <span class="icon">👨‍🏫</span>
-                <p>300+ Mentors</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Learn from <strong>400+</strong> leading universities worldwide and companies</p>
-        <div class="partners">
-            <!-- Partner logos go here -->
+        <div class="signup-link">
+            Not a member? <a href="#">Sign up now</a>
         </div>
-    </footer>
-    <script src="js/scripts.js"></script>
+    </div>
 </body>
 </html>
